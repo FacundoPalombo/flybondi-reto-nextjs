@@ -3,7 +3,7 @@ import { Link } from '../routes';
 import Layout from '../components/Layout';
 
 export default function Search() {
-  const [isOrigin, setIsOrigin] = useState(true);
+  const isOrigin = true;
   return (
     <Layout>
       <article>

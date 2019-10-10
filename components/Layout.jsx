@@ -43,6 +43,10 @@ export default function Layout (props) {
           a, a:hover, a:active{
             text-decoration: none;
             color: #FA3;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
           `}
         </style>

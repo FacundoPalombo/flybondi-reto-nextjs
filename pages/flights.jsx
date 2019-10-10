@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../components/Card';
+import { Card } from '../components/Card';
 import { Link } from '../routes';
 import * as mdzData from '../epa-mdz.json';
 import * as corData from '../epa-cor.json';
@@ -110,7 +110,6 @@ function Flights(props) {
                 .filter(item => item.destination === 'EPA')
                 .map((item, key) => {
                   const { origin, destination, flightNo, arrivalDate, departureDate, currency } = item;
-                  console.log(item)
                   return (
                     <li key={key}>
                       <Link

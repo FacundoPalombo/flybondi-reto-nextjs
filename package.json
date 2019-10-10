@@ -10,8 +10,8 @@
     "axios": "^0.19.0",
     "next": "latest",
     "next-routes": "^1.4.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-icons": "^3.7.0"
   },
   "license": "ISC",

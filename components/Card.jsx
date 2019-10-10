@@ -1,7 +1,7 @@
 import React from 'react'
 import GlobalStyles from './GlobalStyles'
 
-export default function Card({
+export function Card({
   code,
   origin,
   destination,
