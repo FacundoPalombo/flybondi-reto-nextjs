@@ -269,7 +269,12 @@ export default function GlobalStyles() {
         html input[disabled] {
           cursor: default;
         }
-
+        a, a:hover{
+          color: #222;
+        }
+        a:active {
+          color: #777;
+        }
         input[type='checkbox'],
         input[type='radio'] {
           box-sizing: border-box;
