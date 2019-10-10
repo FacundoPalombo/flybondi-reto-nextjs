@@ -21,16 +21,19 @@ export default function Layout (props) {
         <style jsx>
           {`
           footer {
-            width: 100%;
-            height: 70px;
-            box-shadow: 0 0 3px rgba(0,0,0,0.3);
-            display: block;
-            position: relative;
-            margin-top: 20px;
+            position: fixed;
+            left: 0;
             bottom: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #333;
+            color: #EEE;
+            text-align: center;
+            padding: 10px;
           }
           h3{
-            font-weight: 700;
+            font-weight: 600;
+            font-family: -apple-system-ui, Roboto, Helvetica, Arial sans-serif;
           }
           nav {
             width: 100%;
@@ -48,6 +51,9 @@ export default function Layout (props) {
             align-items: center;
             justify-content: center;
           }
+          .main_layout {
+            margin-bottom: 80px;
+          }
           `}
         </style>
         <header>
@@ -58,7 +64,9 @@ export default function Layout (props) {
           </nav>
         </header>
         <GlobalStyles />
-        { children }
+        <div className='main_layout'>
+          { children }
+        </div>
         <footer>
           <h3>Flybondi. Tu app de vuelos.</h3>
         </footer>

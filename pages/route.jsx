@@ -52,7 +52,12 @@ function Route(props) {
           height: 100%;
           overflow: hidden;
         }
-
+        span {
+          font-family: -apple-system-ui, Roboto Helvetica, Arial, sans-serif;
+          font-weight: 600;
+          font-size: 21px;
+          margin: 6px;
+        }
         `}
       </style>
       <main>
@@ -65,6 +70,7 @@ function Route(props) {
           </div>
         </header>
         <section>
+          <span>Destino: {destination.location.cityName} ({destination.code})</span>
         </section>
       </main>
     </Layout>

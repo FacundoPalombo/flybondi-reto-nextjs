@@ -7,9 +7,6 @@ import * as routes from '../routes.json'
 import Layout from '../components/Layout';
 
 function Routes(props) {
-  const handleOrigin = e => {
-    e.preventDefault();
-  };
   console.log(props)
   return (
     <Layout>

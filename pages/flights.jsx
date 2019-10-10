@@ -11,6 +11,12 @@ function Flights(props) {
     <Layout>
       <style jsx>
         {`
+          h2{
+            font-weight: bolder;
+            font-size: 32px;
+            font-family: -apple-system-ui, Roboto, sans-serif;
+            margin-top: 30px;
+          }
           ul {
             display: grid;
             grid-template-columns: repeat(3, minmax(300px, 1fr));
@@ -34,10 +40,6 @@ function Flights(props) {
         <article>
           <h2>Choose your outbound flight to Mendoza</h2>
           <section>
-            <p>
-              Here it should be a flight list with all available outbound
-              flights for the selected trip. Each list item should have:
-            </p>
             <ul>
               {props.mdz
                 .filter(item => item.origin === 'MDZ')
@@ -73,10 +75,6 @@ function Flights(props) {
         <article>
           <h2>Choose your inbound flight to Buenos Aires</h2>
           <section>
-            <p>
-              Here it should be a flight list with all available inbound flights
-              for the selected trip.
-            </p>
             <ul>
               {props.cor
                 .filter(item => item.destination === 'EPA')
