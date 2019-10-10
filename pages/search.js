@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 
 export default function Search() {
   const [isOrigin, setIsOrigin] = useState(true);
   return (
-    <main>
+    <Layout>
       <article>
         <h1>Select your {isOrigin ? 'origin' : 'destination'}</h1>
         <section>
@@ -25,6 +26,6 @@ export default function Search() {
           <a>Start your journey!</a>
         </Link>
       </article>
-    </main>
+    </Layout>
   );
 }

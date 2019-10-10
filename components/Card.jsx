@@ -54,8 +54,8 @@ export default function Card({
       <h2>{name} ({origin})</h2>
       <img src='/assets/airplane.jpg' alt={`${origin && origin}${destination && ` to ${destination}`}`}/>
       <span>Destination: {destination}</span>
-      <span className="bottom-span">{code}</span>
       {children}
+      <span className="bottom-span">{code}</span>
     </div>
   )
 }

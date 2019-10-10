@@ -92,7 +92,23 @@ export default function GlobalStyles() {
           font: inherit;
           vertical-align: baseline;
         }
-
+        body {
+          display: flex;
+          align-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+        }
+        html {
+          
+          width: 100%;
+          height: 100%;
+        }
+        #__next{
+          width: 100%;
+          height: 100%;
+        }
         :focus {
           outline: 0;
         }
