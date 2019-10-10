@@ -1,7 +1,8 @@
 import React from 'react';
-import * as routes from '../routes.json'
+import * as corData from '../epa-cor.json'
+import * as mdzData from '../epa-mdz.json'
 import Card from '../components/Card'
-import Link from 'next/link'
+import { Link } from '../routes'
 
 function Flights(props) {
   const origin = 'EPA', destination = 'MDZ'
@@ -11,8 +12,12 @@ function Flights(props) {
     <style jsx>
       {`
       ul {
-        list-style: none;
-        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 30px;
+        margin-top: 30px;
+        padding: 0 30px;
       }
       `}
     </style>
@@ -25,16 +30,28 @@ function Flights(props) {
             for the selected trip. Each list item should have:
           </p>
           <ul>
-            <li>
-              <Link 
-              href='/flight' 
-              
-              prefetch>
-                <a>
-                  <Card name="asd" code="vsd" origin="EPA" destination="MDZ" ></Card>
-                </a>
-              </Link>
-            </li>
+          {
+            props.mdz.filter(item => item.origin === 'MDZ').map((item,key) => {
+              const {origin, destination, flightNo} = item
+              return(
+                <li key={key}>
+                  <Link 
+                  route='flight'
+                  params={
+                    {
+                      origin,
+                      destination
+                    }
+                  }
+                  prefetch>
+                    <a>
+                      <Card name={`Flight N° ${flightNo}`} code={`${origin}.${destination}-${flightNo}`} origin={origin} destination={destination} ></Card>
+                    </a>
+                  </Link>
+                </li>
+              )
+            })
+          }
           </ul>
         </section>
       </article>
@@ -60,8 +77,10 @@ function Flights(props) {
   );
 }
 Flights.getInitialProps = async (props) => {
-  console.log(props)
-  return routes
+  const { default: { flights: cor }} = corData;
+  const { default: { flights: mdz }} = mdzData;
+  const flights = {cor,mdz}
+  return flights;
 }
 
 export default Flights

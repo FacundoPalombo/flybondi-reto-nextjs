@@ -19,11 +19,12 @@ export default function Card({
             font-weight: 700;
             font-size: 28px;
             text-align: initial;
+            margin-top: 12px;
           }
           div {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             box-shadow: 0 0 4px rgba(0,0,0,0.4);
             border-radius: 20px;
@@ -43,12 +44,17 @@ export default function Card({
             line-height: 24px;
             letter-spacing: 1.2px;
           }
+          .bottom-span {
+            position: relative;
+            bottom: 0;
+          }
           `
         }
       </style>
       <h2>{name} ({origin})</h2>
       <img src='/assets/airplane.jpg' alt={`${origin && origin}${destination && ` to ${destination}`}`}/>
       <span>Destination: {destination}</span>
+      <span className="bottom-span">{code}</span>
       {children}
     </div>
   )
