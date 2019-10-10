@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from '../routes';
 import Layout from '../components/Layout';
 
 export default function Search() {
@@ -22,7 +22,7 @@ export default function Search() {
             <li>Display the location city name</li>
           </ul>
         </section>
-        <Link href="/flights">
+        <Link route="flights">
           <a>Start your journey!</a>
         </Link>
       </article>

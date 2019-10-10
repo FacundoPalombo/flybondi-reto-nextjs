@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '../routes';
 import Layout from '../components/Layout';
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
           <h2>Promotions</h2>
         </section>
         <section>
-          <Link href="/search">
+          <Link route="search">
             <a>Search</a>
           </Link>
         </section>
