@@ -7,7 +7,6 @@ import * as routes from '../routes.json'
 import Layout from '../components/Layout';
 
 function Routes(props) {
-  console.log(props)
   return (
     <Layout>
       <style jsx>

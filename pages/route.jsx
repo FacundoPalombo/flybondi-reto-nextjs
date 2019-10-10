@@ -9,7 +9,6 @@ function Route(props) {
     origin,
     destination
   } = props
-  console.log(props)
   return(
     <Layout>
       <style jsx>
