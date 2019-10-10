@@ -1,0 +1,11 @@
+import React from 'react'
+import GlobalStyles from '../components/GlobalStyles'
+
+export default function Flight() {
+  return(
+    <>
+      <GlobalStyles />
+      Hello!
+    </>
+  )
+}
